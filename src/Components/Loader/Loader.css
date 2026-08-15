@@ -1,0 +1,139 @@
+.loader {
+    position: relative;
+    width: min-content;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: .7rem;
+    background-color: transparent;
+}
+
+.lleft {
+    position: absolute;
+    top: 0;
+    width: .5rem;
+    background: #dc0000;
+    animation: lleft .8s ease-in-out forwards;
+    z-index: 10;
+}
+
+@keyframes lleft {
+    0% {
+        left: -1rem;
+        height: 5%;
+    }
+
+    40% {
+        left: 0;
+        height: 15%;
+    }
+
+    100% {
+        left: 0;
+        height: 100%;
+    }
+}
+
+.lbottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: .5rem;
+    background: #dc0000;
+    animation: lbottom 1s ease-in-out forwards .2s;
+    z-index: 9;
+    border-top-right-radius: .1rem;
+    border-bottom-right-radius: .1rem;
+}
+
+@keyframes lbottom {
+
+    0%,
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.circle {
+    position: relative;
+    min-width: 2rem;
+    min-height: 2rem;
+    margin-left: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-outside {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    border-width: 4px;
+    border-color: #fff;
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    animation: rotateLeft 1s linear infinite;
+}
+
+.circle-inside {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-width: 3px;
+    border-color: #dc0000;
+    border-style: dotted dotted solid solid;
+    border-radius: 50%;
+    animation: rotateRight 1s linear infinite;
+}
+
+@keyframes rotateLeft {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRight {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.loader-text {
+    left: 2.8rem;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    font: 2.5rem "Loflicker";
+    text-transform: uppercase;
+    z-index: 7;
+    height: 2rem;
+    line-height: .85;
+}
+
+.text-cover {
+    position: absolute;
+    inset: 0;
+    background-color: #141E27;
+    z-index: 8;
+    animation: revealText .7s linear forwards 1.2s;
+    height: 100%;
+}
+
+@keyframes revealText {
+    0% {
+        border-left: 5px solid #dc0000;
+    }
+
+    100% {
+        transform: translateX(10rem);
+        border-left: 5px solid #dc0000;
+        display: none;
+    }
+}

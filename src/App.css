@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Loflicker';
+    src: url('./assets/fonts/Loflicker.ttf');
+}
+
+@font-face {
+    font-family: 'BreeSerif';
+    src: url(./assets/fonts/BreeSerif.otf);
+}
+
+@font-face {
+    font-family: 'SerialMono';
+    src: url('./assets/fonts/SerialMono.ttf')
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('./assets/fonts/FiraCode.ttf')
+}

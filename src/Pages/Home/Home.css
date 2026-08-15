@@ -1,0 +1,27 @@
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #141E27;
+}
+
+.sidebar {
+    width: 25%;
+    min-height: 100%;
+}
+
+.loader-cards {
+    flex: 1;
+    height: 100%;
+}
+
+@media screen and (max-width:1200px) {
+    .home-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
