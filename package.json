@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy:org": "gh-pages -d dist --repo=https://loadify-loaders@github.com/loadify-loaders/loadify-loaders.github.io.git"
   },
   "dependencies": {
     "react": "^19.2.7",
