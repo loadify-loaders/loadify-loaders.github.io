@@ -1,6 +1,6 @@
 .home-container {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     background-color: #141E27;
@@ -19,9 +19,16 @@
 @media screen and (max-width:1200px) {
     .home-container {
         flex-direction: column;
+        height: auto;
     }
 
     .sidebar {
         width: 100%;
+        min-height: min-content;
     }
+
+    .loader-cards {
+        flex: 1;
+    }
+
 }
