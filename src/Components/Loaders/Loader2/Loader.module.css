@@ -1,0 +1,21 @@
+.loader {
+    perspective: 500px;
+}
+
+.rectangle {
+    width: 3.5rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: .2rem;
+    animation: flip 1s linear infinite;
+}
+
+@keyframes flip {
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateZ(180deg);
+    }
+}

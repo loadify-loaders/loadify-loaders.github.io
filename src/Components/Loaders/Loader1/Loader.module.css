@@ -1,15 +1,8 @@
-:root {
-    --primary-color: #fff;
-    --width: 3.5rem;
-    --border-radius: 50%;
-    --border-width: .4rem;
-}
-
 .circle {
-    width: var(--width);
+    width: 3.5rem;
     aspect-ratio: 1;
-    border-radius: var(--border-radius);
-    border: var(--border-width) solid var(--primary-color);
+    border-radius: 50%;
+    border: .4rem solid #fff;
     border-bottom-color: transparent;
     border-left-color: transparent;
     animation: rotate 1s linear infinite;

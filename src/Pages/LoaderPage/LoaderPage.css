@@ -117,8 +117,8 @@
     font-weight: lighter;
     font-style: normal;
     display: flex;
-    max-height: 4rem;
-    padding-bottom: 1rem !important;
+    max-height: 4.5rem;
+    padding-bottom: .5rem;
 }
 
 .css {
