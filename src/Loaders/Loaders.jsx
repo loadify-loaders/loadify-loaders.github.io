@@ -1,17 +1,19 @@
 import Loader1 from '../Components/Loaders/Loader1/Loader'
 import Loader2 from '../Components/Loaders/Loader2/Loader'
 import Loader3 from '../Components/Loaders/Loader3/Loader'
+import Loader4 from '../Components/Loaders/Loader4/Loader'
 
 const LoadersData = [
     {
         id: 1,
         category: 'circle',
         react:
-            `
+`
 <div className='circle'></div>
+
 `,
         css:
-            `
+`
 .circle {
     width: 3rem;
     aspect-ratio: 1;
@@ -26,23 +28,22 @@ const LoadersData = [
     to {
         transform: rotate(360deg);
     }
-}
-    
-`,
+}   
+    `,
         component: <Loader1 />
     },
     {
         id: 2,
         category: 'rectangle',
         react:
-            `
+ `
 <div className='loader'>
     <div className='rectangle'></div>
 </div>
 
 `,
         css:
-            `
+`
 .loader {
     perspective: 500px;
 }
@@ -64,16 +65,14 @@ const LoadersData = [
         transform: rotateZ(180deg);
     }
 }
-
-`,
+    `,
         component: <Loader2 />
     },
     {
         id: 3,
         category: 'circle',
         react:
-            `
-
+`
 <div className='loader'>
     <span></span>
     <span></span>
@@ -88,11 +87,9 @@ const LoadersData = [
     <span></span>
     <span></span>
 </div>
-
-`,  
+    `,  
         css: 
-        `
-
+`
 .loader {
     width: 3rem;
     aspect-ratio: 1;
@@ -163,9 +160,38 @@ const LoadersData = [
         transform: rotate(360deg);
     }
 }
-
-        `,
+    `,
         component: <Loader3 />
+    },
+    {
+        id:4,
+        category: 'circle',
+        react:
+`
+<div className='loader'></div>
+    `,
+        css:
+`
+.loader {
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        width: 1rem;
+    }
+
+    50% {
+        width: 2rem;
+    }
+}
+    `,
+        component: <Loader4/>
     }
 ]
 

@@ -103,7 +103,7 @@
 }
 
 .codebox-body {
-    padding: 0 1rem !important;
+    padding: 0 1rem;
     overflow: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
@@ -117,8 +117,7 @@
     font-weight: lighter;
     font-style: normal;
     display: flex;
-    max-height: 4.5rem;
-    padding-bottom: .5rem;
+    max-height: 4.5rem !important;
 }
 
 .css {
