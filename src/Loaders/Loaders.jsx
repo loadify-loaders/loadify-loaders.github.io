@@ -3,6 +3,7 @@ import Loader2 from '../Components/Loaders/Loader2/Loader'
 import Loader3 from '../Components/Loaders/Loader3/Loader'
 import Loader4 from '../Components/Loaders/Loader4/Loader'
 import Loader5 from '../Components/Loaders/Loader5/Loader'
+import Loader6 from '../Components/Loaders/Loader6/Loader'
 
 const LoadersData = [
     {
@@ -199,7 +200,7 @@ const LoadersData = [
         category: 'circle',
         react: 
 `
-<div className={styles['loader']}>
+<div className='loader'>
     <span></span>
     <span></span>
     <span></span>
@@ -225,30 +226,27 @@ const LoadersData = [
     left: 0;
     transform: translate(0, -50%);
     opacity: 0;
-}
-
-.loader span:nth-child(1) {
     animation: slide 1s linear infinite;
 }
 
 .loader span:nth-child(2) {
-    animation: slide 1s linear infinite .2s;
+    animation-delay: .2s;
 }
 
 .loader span:nth-child(3) {
-    animation: slide 1s linear infinite .4s;
+    animation-delay: .4s;
 }
 
 .loader span:nth-child(4) {
-    animation: slide 1s linear infinite .6s;
+    animation-delay: .6s;
 }
 
 .loader span:nth-child(5) {
-    animation: slide 1s linear infinite .8s;
+    animation-delay: .8s;
 }
 
 .loader span:nth-child(6) {
-    animation: slide 1s linear infinite 1s;
+    animation-delay: 1s;
 }
 
 @keyframes slide {
@@ -268,6 +266,33 @@ const LoadersData = [
 }
     `,
         component: <Loader5/>
+    },
+    {
+        id: 6,
+        react:
+`
+<div className='loader'></div>
+    `,
+        css:
+`
+.loader {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    opacity: .5;
+    border-radius: .2rem;
+    animation: fadeIn 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    50% {
+        width: 2rem;
+        opacity: 1;
+    }
+}
+    `,
+        category: 'rectangle',
+        component: <Loader6/>
     }
 ]
 
