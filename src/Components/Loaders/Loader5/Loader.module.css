@@ -1,0 +1,56 @@
+.loader {
+    width: 6rem;
+    position: relative;
+}
+
+.loader span {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+}
+
+.loader span:nth-child(1) {
+    animation: slide 1s linear infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: slide 1s linear infinite .2s;
+}
+
+.loader span:nth-child(3) {
+    animation: slide 1s linear infinite .4s;
+}
+
+.loader span:nth-child(4) {
+    animation: slide 1s linear infinite .6s;
+}
+
+.loader span:nth-child(5) {
+    animation: slide 1s linear infinite .8s;
+}
+
+.loader span:nth-child(6) {
+    animation: slide 1s linear infinite 1s;
+}
+
+@keyframes slide {
+    50% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    1%,
+    100% {
+        opacity: 1;
+    }
+}
