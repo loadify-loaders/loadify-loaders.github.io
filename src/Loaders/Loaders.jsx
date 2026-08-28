@@ -4,6 +4,7 @@ import Loader3 from '../Components/Loaders/Loader3/Loader'
 import Loader4 from '../Components/Loaders/Loader4/Loader'
 import Loader5 from '../Components/Loaders/Loader5/Loader'
 import Loader6 from '../Components/Loaders/Loader6/Loader'
+import Loader7 from '../Components/Loaders/Loader7/Loader'
 
 const LoadersData = [
     {
@@ -293,6 +294,54 @@ const LoadersData = [
     `,
         category: 'rectangle',
         component: <Loader6/>
+    },
+    {
+        id: 7,
+        category: 'rectangle',
+        react:
+`
+<div className='loader'>
+    <div className='rectangle1'></div>
+    <div className='rectangle2'></div>
+</div>
+    `,
+        css: 
+`
+.loader {
+    width: 3.5rem;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.rectangle1,
+.rectangle2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: .2rem solid red;
+    animation: rotateLeft 2s linear infinite;
+}
+
+.rectangle2 {
+    border: .2rem solid #fff;
+    animation: rotateRight 2s linear infinite;
+}
+
+@keyframes rotateLeft {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotateRight {
+    to {
+        transform: rotate(360deg);
+    }
+}
+    `,
+        component: <Loader7/>
     }
 ]
 
