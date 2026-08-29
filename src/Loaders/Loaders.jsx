@@ -5,6 +5,7 @@ import Loader4 from '../Components/Loaders/Loader4/Loader'
 import Loader5 from '../Components/Loaders/Loader5/Loader'
 import Loader6 from '../Components/Loaders/Loader6/Loader'
 import Loader7 from '../Components/Loaders/Loader7/Loader'
+import Loader8 from '../Components/Loaders/Loader8/Loader'
 
 const LoadersData = [
     {
@@ -342,6 +343,61 @@ const LoadersData = [
 }
     `,
         component: <Loader7/>
+    },
+    {
+        id: 8,
+        category: 'circle',
+        react: 
+`
+<div className='loader'>
+    <div className='outer-circle'></div>
+    <div className='inner-circle'></div>
+</div>  
+    `,
+    css:
+`
+.circle {
+    position: relative;
+    width: 3rem;
+    aspect-ratio: 1;
+}
+
+.outer-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: .3rem solid #fff;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: rotate-left 1s linear infinite;
+}
+
+.inner-circle {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: .3rem solid red;
+    border-right-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate-right 1s linear infinite;
+}
+
+@keyframes rotate-left {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-right {
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+    `,
+        component: <Loader8/>
     }
 ]
 
