@@ -6,6 +6,7 @@ import Loader5 from '../Components/Loaders/Loader5/Loader'
 import Loader6 from '../Components/Loaders/Loader6/Loader'
 import Loader7 from '../Components/Loaders/Loader7/Loader'
 import Loader8 from '../Components/Loaders/Loader8/Loader'
+import Loader9 from '../Components/Loaders/Loader9/Loader'
 
 const LoadersData = [
     {
@@ -169,7 +170,7 @@ const LoadersData = [
     },
     {
         id:4,
-        category: 'circle',
+        category: 'dots',
         react:
 `
 <div className='loader'></div>
@@ -199,7 +200,7 @@ const LoadersData = [
     },
     {
         id: 5,
-        category: 'circle',
+        category: 'dots',
         react: 
 `
 <div className='loader'>
@@ -398,6 +399,108 @@ const LoadersData = [
 }
     `,
         component: <Loader8/>
+    },
+    {
+        id: 9,
+        category: 'bars',
+        react:
+`
+<div className={styles.loader}>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+}
+
+.loader span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: .1rem;
+}
+
+.loader span:nth-child(1) {
+    animation: leftBar 4s ease infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: rightBar 4s ease infinite;
+}
+
+.loader span:nth-last-child(2) {
+    animation: middleBar 4s ease infinite;
+}
+
+@keyframes leftBar {
+    25% {
+        top: -2rem;
+        left: 0;
+    }
+
+    50% {
+        top: -2rem;
+        left: -2rem;
+    }
+
+    75% {
+        top: 0;
+        left: -2rem;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes rightBar {
+    25% {
+        top: -2rem;
+        left: 0;
+    }
+
+    50% {
+        top: -2rem;
+        left: 2rem;
+    }
+
+    75% {
+        top: 0;
+        left: 2rem;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes middleBar {
+    25% {
+        top: 0;
+    }
+
+    50% {
+        top: -2rem;
+    }
+
+    75%,
+    100% {
+        top: 0;
+    }
+}
+    `,
+        component: <Loader9/>
     }
 ]
 
