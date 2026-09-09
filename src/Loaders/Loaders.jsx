@@ -7,6 +7,7 @@ import Loader6 from '../Components/Loaders/Loader6/Loader'
 import Loader7 from '../Components/Loaders/Loader7/Loader'
 import Loader8 from '../Components/Loaders/Loader8/Loader'
 import Loader9 from '../Components/Loaders/Loader9/Loader'
+import Loader10 from '../Components/Loaders/Loader10/Loader'
 
 const LoadersData = [
     {
@@ -402,10 +403,10 @@ const LoadersData = [
     },
     {
         id: 9,
-        category: 'bars',
+        category: 'reactangle',
         react:
 `
-<div className={styles.loader}>
+<div className='loader'>
     <span></span>
     <span></span>
     <span></span>
@@ -501,6 +502,45 @@ const LoadersData = [
 }
     `,
         component: <Loader9/>
+    },
+    {
+        id: 10,
+        category: 'circle',
+        react:
+`
+<div className='Loader'>
+    <div className='circle'></div>
+</div>
+    `,
+        css:
+`
+.Loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: .4rem solid #fff;
+    outline-offset: -.4rem;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .4rem solid transparent;
+    border-top-color: red;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+    `,
+        component: <Loader10/>
     }
 ]
 

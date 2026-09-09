@@ -1,0 +1,25 @@
+.Loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: .4rem solid #fff;
+    outline-offset: -.4rem;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .4rem solid transparent;
+    border-top-color: red;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
