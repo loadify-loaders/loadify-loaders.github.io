@@ -8,6 +8,7 @@ import Loader7 from '../Components/Loaders/Loader7/Loader'
 import Loader8 from '../Components/Loaders/Loader8/Loader'
 import Loader9 from '../Components/Loaders/Loader9/Loader'
 import Loader10 from '../Components/Loaders/Loader10/Loader'
+import Loader11 from '../Components/Loaders/Loader11/Loader'
 
 const LoadersData = [
     {
@@ -403,7 +404,7 @@ const LoadersData = [
     },
     {
         id: 9,
-        category: 'reactangle',
+        category: 'rectangle',
         react:
 `
 <div className='loader'>
@@ -541,6 +542,85 @@ const LoadersData = [
 }
     `,
         component: <Loader10/>
+    },
+    {
+        id: 11,
+        category: 'circle',
+        react:
+`
+<div className='loader'>
+    <div className='circle-left'></div>
+    <div className='circle-right'></div>
+</div>
+    `,
+        css:
+`
+.loader {
+    position: relative;
+    width: 3rem;
+    aspect-ratio: 1;
+    animation: loaderRotate 4s linear infinite;
+}
+
+.circle-left {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #fff;
+    clip-path: inset(0 50% 0 0);
+    border-radius: 50%;
+    animation: circleLeft 4s linear infinite;
+}
+
+.circle-right {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #fff;
+    clip-path: inset(0 0 0 50%);
+    border-radius: 50%;
+    animation: circleRight 4s linear infinite;
+}
+
+@keyframes circleLeft {
+
+    25%,
+    50% {
+        transform: translateY(-1.5rem);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes circleRight {
+
+    25%,
+    50% {
+        transform: translateY(1.5rem);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loaderRotate {
+    25% {
+        transform: rotate(0);
+    }
+
+    50%,
+    75% {
+        transform: rotate(90deg);
+    }
+
+}
+    `,
+        component: <Loader11/>
+
     }
 ]
 
