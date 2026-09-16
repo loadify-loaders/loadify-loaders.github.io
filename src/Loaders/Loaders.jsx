@@ -9,6 +9,7 @@ import Loader8 from '../Components/Loaders/Loader8/Loader'
 import Loader9 from '../Components/Loaders/Loader9/Loader'
 import Loader10 from '../Components/Loaders/Loader10/Loader'
 import Loader11 from '../Components/Loaders/Loader11/Loader'
+import Loader12 from '../Components/Loaders/Loader12/Loader'
 
 const LoadersData = [
     {
@@ -621,6 +622,52 @@ const LoadersData = [
     `,
         component: <Loader11/>
 
+    },
+    {
+        id: 12,
+        category: 'rectangle',
+        react:
+`
+<div className='loader'>
+    <div className='rectangle'></div>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 5rem;
+    height: 1rem;
+}
+
+.rectangle {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: .1rem;
+    transform-origin: center;
+    animation: roll 2.5s ease infinite;
+}
+
+@keyframes roll {
+    25% {
+        transform: translateX(1rem) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(2rem) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(3rem) rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(4rem) rotate(360deg);
+        opacity: 1;
+    }
+}
+    `,
+        component: <Loader12/>
     }
 ]
 

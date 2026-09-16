@@ -1,0 +1,32 @@
+.loader {
+    width: 5rem;
+    height: 1rem;
+}
+
+.rectangle {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: .1rem;
+    transform-origin: center;
+    animation: roll 2.5s ease infinite;
+}
+
+@keyframes roll {
+    25% {
+        transform: translateX(1rem) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(2rem) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(3rem) rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(4rem) rotate(360deg);
+        opacity: 1;
+    }
+}
