@@ -6,6 +6,7 @@ export default function Loader() {
         <div className={styles['loader']}>
             <div className={styles['circle-left']}></div>
             <div className={styles['circle-right']}></div>
+            <div className={styles['stick']}></div>
         </div>
     )
 }

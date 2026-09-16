@@ -25,6 +25,17 @@
     animation: circleRight 4s linear infinite;
 }
 
+.stick{
+    position: absolute;
+    height: 99%;
+    width: .1rem;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: stick 4s linear infinite;
+}
+
 @keyframes circleLeft {
 
     25%,
@@ -60,4 +71,13 @@
         transform: rotate(90deg);
     }
 
+}
+
+@keyframes stick {
+    0%, 75%{
+        opacity: 0;
+    }
+    76%, 100%{
+        opacity: 1;
+    }
 }
