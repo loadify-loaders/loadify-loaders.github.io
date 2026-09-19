@@ -10,6 +10,7 @@ import Loader9 from '../Components/Loaders/Loader9/Loader'
 import Loader10 from '../Components/Loaders/Loader10/Loader'
 import Loader11 from '../Components/Loaders/Loader11/Loader'
 import Loader12 from '../Components/Loaders/Loader12/Loader'
+import Loader13 from '../Components/Loaders/Loader13/Loader'
 
 const LoadersData = [
     {
@@ -668,6 +669,94 @@ const LoadersData = [
 }
     `,
         component: <Loader12/>
+    },
+    {
+        id: 13,
+        category: 'dots',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: .2rem;
+}
+
+.loader span {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: .2;
+}
+
+.loader span:nth-child(1) {
+    animation: firstCircle linear 1s infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: secondCircle linear 1s infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: thirdCircle linear 1s infinite;
+}
+
+.loader span:nth-child(4) {
+    animation: fourthCircle linear 1s infinite;
+}
+
+@keyframes firstCircle {
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: .2;
+    }
+}
+
+@keyframes secondCircle {
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: .2;
+    }
+}
+
+@keyframes thirdCircle {
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: .2;
+    }
+}
+
+@keyframes fourthCircle {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .2;
+    }
+}
+    `,
+        component: <Loader13/>
     }
 ]
 
