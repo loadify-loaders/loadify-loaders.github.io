@@ -11,6 +11,7 @@ import Loader10 from '../Components/Loaders/Loader10/Loader'
 import Loader11 from '../Components/Loaders/Loader11/Loader'
 import Loader12 from '../Components/Loaders/Loader12/Loader'
 import Loader13 from '../Components/Loaders/Loader13/Loader'
+import Loader14 from '../Components/Loaders/Loader14/Loader'
 
 const LoadersData = [
     {
@@ -757,6 +758,85 @@ const LoadersData = [
 }
     `,
         component: <Loader13/>
+    },
+    {
+        id: 14,
+        category: 'dots',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: .8rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.loader span {
+    width: .5rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader span:nth-child(1) {
+    animation: dotOne 2s linear infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: dotTwo 2s linear infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: dotThree 2s linear infinite 1s;
+}
+
+.loader span:nth-child(4) {
+    animation: dotFour 2s linear infinite 1s;
+}
+
+@keyframes dotOne {
+    50% {
+        width: .8rem;
+        left: -150%;
+    }
+}
+
+@keyframes dotTwo {
+    50% {
+        width: .8rem;
+        left: 250%;
+    }
+}
+
+@keyframes dotThree {
+    50% {
+        width: .8rem;
+        top: -150%;
+    }
+}
+
+@keyframes dotFour {
+    50% {
+        width: .8rem;
+        top: 250%;
+    }
+}
+    `,
+        component: <Loader14/>
     }
 ]
 
