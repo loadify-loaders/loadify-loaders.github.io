@@ -12,6 +12,7 @@ import Loader11 from '../Components/Loaders/Loader11/Loader'
 import Loader12 from '../Components/Loaders/Loader12/Loader'
 import Loader13 from '../Components/Loaders/Loader13/Loader'
 import Loader14 from '../Components/Loaders/Loader14/Loader'
+import Loader15 from '../Components/Loaders/Loader15/Loader'
 
 const LoadersData = [
     {
@@ -552,74 +553,36 @@ const LoadersData = [
         react:
 `
 <div className='loader'>
-    <div className='circle-left'></div>
-    <div className='circle-right'></div>
+    <span></span>
 </div>
     `,
         css:
 `
 .loader {
     position: relative;
-    width: 3rem;
+    width: 2rem;
     aspect-ratio: 1;
-    animation: loaderRotate 4s linear infinite;
-}
-
-.circle-left {
-    position: absolute;
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: #fff;
-    clip-path: inset(0 50% 0 0);
+    background-color: aliceblue;
     border-radius: 50%;
-    animation: circleLeft 4s linear infinite;
+    position: relative;
+    animation: rotate 1s linear infinite;
 }
 
-.circle-right {
+.loader span {
     position: absolute;
-    width: 100%;
+    width: .6rem;
     aspect-ratio: 1;
-    background-color: #fff;
-    clip-path: inset(0 0 0 50%);
     border-radius: 50%;
-    animation: circleRight 4s linear infinite;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    background-color: red;
 }
 
-@keyframes circleLeft {
-
-    25%,
-    50% {
-        transform: translateY(-1.5rem);
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
     }
-
-    75% {
-        transform: translateY(0);
-    }
-
-}
-
-@keyframes circleRight {
-
-    25%,
-    50% {
-        transform: translateY(1.5rem);
-    }
-
-    75% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes loaderRotate {
-    25% {
-        transform: rotate(0);
-    }
-
-    50%,
-    75% {
-        transform: rotate(90deg);
-    }
-
 }
     `,
         component: <Loader11/>
@@ -837,6 +800,123 @@ const LoadersData = [
 }
     `,
         component: <Loader14/>
+    },
+    {
+        id: 15,
+        category: 'rectangle',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loader span {
+    position: absolute;
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: .1rem;
+}
+
+.loader span:nth-child(1) {
+    left: 0;
+    top: 0;
+    transform: translate(45%, 45%);
+    animation: rectangle1 2s ease-in-out infinite;
+    transform-origin: right bottom;
+}
+
+.loader span:nth-child(2) {
+    right: 0;
+    top: 0;
+    transform: translate(-45%, 45%);
+    background-color: #fff;
+    animation: rectangle2 2s ease-in-out infinite;
+    transform-origin: left bottom;
+}
+
+.loader span:nth-child(3) {
+    left: 0;
+    bottom: 0;
+    transform: translate(45%, -45%);
+    background-color: #fff;
+    animation: rectangle3 2s ease-in-out infinite;
+    transform-origin: right top;
+}
+
+.loader span:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    transform: translate(-45%, -45%);
+    background-color: #fff;
+    animation: rectangle4 2s ease-in-out infinite;
+    transform-origin: left top;
+}
+
+@keyframes rectangle1 {
+    12.5% {
+        transform: translate(45%, 45%) scale(1.3);
+    }
+
+    25% {
+        transform: translate(45%, 45%) scale(1);
+    }
+}
+
+@keyframes rectangle2 {
+    25% {
+        transform: translate(-45%, 45%) scale(1);
+    }
+
+    37.5% {
+        transform: translate(-45%, 45%) scale(1.3);
+    }
+
+    50% {
+        transform: translate(-45%, 45%) scale(1);
+    }
+}
+
+@keyframes rectangle3 {
+    50% {
+        transform: translate(45%, -45%) scale(1);
+    }
+
+    62.5% {
+        transform: translate(45%, -45%) scale(1.3);
+    }
+
+    75% {
+        transform: translate(45%, -45%) scale(1);
+    }
+}
+
+@keyframes rectangle4 {
+    75% {
+        transform: translate(-45%, -45%) scale(1);
+    }
+
+    87.5% {
+        transform: translate(-45%, -45%) scale(1.3);
+    }
+
+    100% {
+        transform: translate(-45%, -45%) scale(1);
+    }
+}
+    `,
+        component: <Loader15/>
     }
 ]
 
