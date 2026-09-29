@@ -1,83 +1,26 @@
 .loader {
     position: relative;
-    width: 3rem;
+    width: 2rem;
     aspect-ratio: 1;
-    animation: loaderRotate 4s linear infinite;
-}
-
-.circle-left {
-    position: absolute;
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: #fff;
-    clip-path: inset(0 50% 0 0);
+    background-color: aliceblue;
     border-radius: 50%;
-    animation: circleLeft 4s linear infinite;
+    position: relative;
+    animation: rotate 1s linear infinite;
 }
 
-.circle-right {
+.loader span {
     position: absolute;
-    width: 100%;
+    width: .6rem;
     aspect-ratio: 1;
-    background-color: #fff;
-    clip-path: inset(0 0 0 50%);
     border-radius: 50%;
-    animation: circleRight 4s linear infinite;
-}
-
-.stick{
-    position: absolute;
-    height: 99%;
-    width: .1rem;
-    background-color: #fff;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    animation: stick 4s linear infinite;
+    left: 0;
+    transform: translate(-100%);
+    background-color: red;
 }
 
-@keyframes circleLeft {
-
-    25%,
-    50% {
-        transform: translateY(-1.5rem);
-    }
-
-    75% {
-        transform: translateY(0);
-    }
-
-}
-
-@keyframes circleRight {
-
-    25%,
-    50% {
-        transform: translateY(1.5rem);
-    }
-
-    75% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes loaderRotate {
-    25% {
-        transform: rotate(0);
-    }
-
-    50%,
-    75% {
-        transform: rotate(90deg);
-    }
-
-}
-
-@keyframes stick {
-    0%, 75%{
-        opacity: 0;
-    }
-    76%, 100%{
-        opacity: 1;
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
     }
 }
