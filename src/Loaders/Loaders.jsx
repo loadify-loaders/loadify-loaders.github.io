@@ -14,6 +14,7 @@ import Loader13 from '../Components/Loaders/Loader13/Loader'
 import Loader14 from '../Components/Loaders/Loader14/Loader'
 import Loader15 from '../Components/Loaders/Loader15/Loader'
 import Loader16 from '../Components/Loaders/Loader16/Loader'
+import Loader17 from '../Components/Loaders/Loader17/Loader'
 
 const LoadersData = [
     {
@@ -997,6 +998,115 @@ const LoadersData = [
 }
     `,
         component: <Loader16/>
+    },
+    {
+        id: 17,
+        category: 'bars',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.loader span {
+    width: .5rem;
+    background-color: #fff;
+    bottom: 0;
+    border-top-left-radius: .1rem;
+    border-top-right-radius: .1rem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.loader span:nth-child(1) {
+    animation-name: grow1;
+}
+
+.loader span:nth-child(2) {
+    animation-name: grow2;
+}
+
+.loader span:nth-child(3) {
+    animation-name: grow3;
+}
+
+.loader span:nth-child(4) {
+    animation-name: grow4;
+}
+
+.loader span:nth-child(5) {
+    animation-name: grow5;
+}
+
+@keyframes grow1 {
+
+    20%,
+    100% {
+        height: 20%;
+    }
+}
+
+@keyframes grow2 {
+    15% {
+        height: 0;
+    }
+
+    30%,
+    100% {
+        height: 40%;
+    }
+}
+
+@keyframes grow3 {
+    30% {
+        height: 0;
+    }
+
+    45%,
+    100% {
+        height: 60%;
+    }
+}
+
+@keyframes grow4 {
+    45% {
+        height: 0;
+    }
+
+    60%,
+    100% {
+        height: 80%;
+    }
+}
+
+@keyframes grow5 {
+    60% {
+        height: 0;
+    }
+
+    75%,
+    100% {
+        height: 100%;
+    }
+}
+    `,
+        component: <Loader17/>
     }
 ]
 
