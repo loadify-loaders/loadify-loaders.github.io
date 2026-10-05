@@ -1,0 +1,23 @@
+.loader {
+    width: 7rem;
+    height: .8rem;
+    background-color: #fffd;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border-radius: .1rem;
+    padding: .1rem;
+}
+
+.loader span {
+    height: 100%;
+    width: 0;
+    background-color: red;
+    animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes grow {
+    to {
+        width: 100%;
+    }
+}

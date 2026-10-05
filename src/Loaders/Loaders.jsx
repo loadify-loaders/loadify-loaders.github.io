@@ -15,6 +15,7 @@ import Loader14 from '../Components/Loaders/Loader14/Loader'
 import Loader15 from '../Components/Loaders/Loader15/Loader'
 import Loader16 from '../Components/Loaders/Loader16/Loader'
 import Loader17 from '../Components/Loaders/Loader17/Loader'
+import Loader18 from '../Components/Loaders/Loader18/Loader'
 
 const LoadersData = [
     {
@@ -1121,6 +1122,43 @@ const LoadersData = [
 }
     `,
         component: <Loader17/>
+    },
+    {
+        id: 18,
+        category: 'bars',
+        react:
+`
+<div className={styles['loader']}>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 7rem;
+    height: .8rem;
+    background-color: #fffd;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border-radius: .1rem;
+    padding: .1rem;
+}
+
+.loader span {
+    height: 100%;
+    width: 0;
+    background-color: red;
+    animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes grow {
+    to {
+        width: 100%;
+    }
+}
+    `,
+        component: <Loader18/>
     }
 ]
 
