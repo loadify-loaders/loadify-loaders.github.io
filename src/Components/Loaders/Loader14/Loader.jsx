@@ -7,7 +7,6 @@ export default function Loader() {
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
         </div>
     )
 }

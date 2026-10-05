@@ -733,71 +733,85 @@ const LoadersData = [
     <span></span>
     <span></span>
     <span></span>
-    <span></span>
 </div>
     `,
         css:
 `
 .loader {
-    width: .8rem;
+    position: relative;
+    width: 3rem;
     aspect-ratio: 1;
-    background-color: #fff;
-    border-radius: 50%;
     position: relative;
 }
 
 .loader span {
-    width: .5rem;
-    aspect-ratio: 1;
-    background-color: #fff;
-    border-radius: 50%;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 50%;
+    width: 1rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: #fff;
 }
 
 .loader span:nth-child(1) {
-    animation: dotOne 2s linear infinite;
+    transform: translate(-120%, 110%);
+    transform-origin: right;
+    animation-name: grow1;
 }
 
 .loader span:nth-child(2) {
-    animation: dotTwo 2s linear infinite;
+    transform: translate(20%, 110%);
+    transform-origin: left;
+    animation-name: grow2;
 }
 
 .loader span:nth-child(3) {
-    animation: dotThree 2s linear infinite 1s;
+    transform: translate(-50%, 0%);
+    transform-origin: bottom;
+    animation-name: grow3;
 }
 
-.loader span:nth-child(4) {
-    animation: dotFour 2s linear infinite 1s;
-}
+@keyframes grow1 {
+    16.67% {
+        transform: translate(-120%, 110%) scale(1.2);
+    }
 
-@keyframes dotOne {
-    50% {
-        width: .8rem;
-        left: -150%;
+    33.33%,
+    100% {
+        transform: translate(-120%, 110%) scale(1);
     }
 }
 
-@keyframes dotTwo {
-    50% {
-        width: .8rem;
-        left: 250%;
+@keyframes grow2 {
+    66.67% {
+        transform: translate(20%, 110%) scale(1);
+    }
+
+    83.33% {
+        transform: translate(20%, 110%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(20%, 110%) scale(1);
     }
 }
 
-@keyframes dotThree {
-    50% {
-        width: .8rem;
-        top: -150%;
+@keyframes grow3 {
+    33.33% {
+        transform: translate(-50%, 0%) scale(1);
     }
-}
 
-@keyframes dotFour {
     50% {
-        width: .8rem;
-        top: 250%;
+        transform: translate(-50%, 0%) scale(1.2);
+    }
+
+    66.67%,
+    100% {
+        transform: translate(-50%, 0%) scale(1);
     }
 }
     `,
