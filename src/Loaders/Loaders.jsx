@@ -17,6 +17,7 @@ import Loader16 from '../Components/Loaders/Loader16/Loader'
 import Loader17 from '../Components/Loaders/Loader17/Loader'
 import Loader18 from '../Components/Loaders/Loader18/Loader'
 import Loader19 from '../Components/Loaders/Loader19/Loader'
+import Loader20 from '../Components/Loaders/Loader20/Loader'
 
 const LoadersData = [
     {
@@ -1199,6 +1200,92 @@ const LoadersData = [
 }
     `,
         component: <Loader19/>
+    },
+    {
+        id: 20,
+        category: 'circle',
+        react:
+`
+<div className='loader'>
+    <div className='circle1'>
+        <div className='bar1'>
+            <div className='bar2'></div>
+        </div>
+        <div className='circle2'></div>
+    </div>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 4rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle1 {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 1;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 2s ease-in-out infinite;
+}
+
+.circle2 {
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.bar1 {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: #fff;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.bar2 {
+    width: 0;
+    height: 50%;
+    background-color: red;
+    animation: bar2 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+
+    50%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bar2 {
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+    `,
+        component: <Loader20/>
     }
 ]
 
