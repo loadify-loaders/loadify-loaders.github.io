@@ -1,0 +1,36 @@
+.loader {
+    position: relative;
+    width: 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: end;
+}
+
+.bar {
+    height: 10%;
+    width: 100%;
+    background-color: red;
+    border-radius: .1rem;
+}
+
+.dot {
+    position: absolute;
+    width: 1rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0);
+    animation: bouncing 1s ease-in-out infinite;
+}
+
+@keyframes bouncing {
+    50% {
+        transform: translateX(-50%) translateY(-50px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0) scaleY(0.9) scaleX(1.05);
+    }
+}

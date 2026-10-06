@@ -18,6 +18,7 @@ import Loader17 from '../Components/Loaders/Loader17/Loader'
 import Loader18 from '../Components/Loaders/Loader18/Loader'
 import Loader19 from '../Components/Loaders/Loader19/Loader'
 import Loader20 from '../Components/Loaders/Loader20/Loader'
+import Loader21 from '../Components/Loaders/Loader21/Loader'
 
 const LoadersData = [
     {
@@ -1286,6 +1287,57 @@ const LoadersData = [
 }
     `,
         component: <Loader20/>
+    },
+    {
+        id: 21,
+        category: 'dots',
+        react:
+`
+<div className={styles['loader']}>
+    <div className={styles['dot']}></div>
+    <div className={styles['bar']}></div>
+</div>
+    `,
+        css:
+`
+.loader {
+    position: relative;
+    width: 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: end;
+}
+
+.bar {
+    height: 10%;
+    width: 100%;
+    background-color: red;
+    border-radius: .1rem;
+}
+
+.dot {
+    position: absolute;
+    width: 1rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0);
+    animation: bouncing 1s ease-in-out infinite;
+}
+
+@keyframes bouncing {
+    50% {
+        transform: translateX(-50%) translateY(-50px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0) scaleY(0.9) scaleX(1.05);
+    }
+}
+    `,
+        component: <Loader21/>
     }
 ]
 
