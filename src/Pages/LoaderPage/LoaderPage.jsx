@@ -40,14 +40,16 @@ export default function LoaderPage() {
     }
   }
   return (
-    <div className={`loader-container ${isModelOpen ? 'hide-loaders' : ''}`}>
-      {
-        filteredLoaders.map((loader) => {
-          return (
-            <LoaderCard key={loader.id} loader={loader} onOpenModel={handleOpenModel} />
-          )
-        })
-      }
+    <div className='loader-page'>
+      <div className={`loader-container ${isModelOpen ? 'hide-loaders' : ''}`}>
+        {
+          filteredLoaders.map((loader) => {
+            return (
+              <LoaderCard key={loader.id} loader={loader} onOpenModel={handleOpenModel} />
+            )
+          })
+        }
+      </div>
       <div className={`model-overlay ${isModelOpen ? 'open' : ''}`}>
         <div className='model'>
           <div className='close-model'>

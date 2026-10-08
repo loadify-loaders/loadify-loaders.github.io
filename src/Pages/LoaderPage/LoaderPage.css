@@ -1,8 +1,14 @@
+.loader-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .loader-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     overflow: scroll;
@@ -15,6 +21,7 @@
 .hide-loaders {
     max-height: 100vh;
     overflow: hidden;
+    opacity: 0;
 }
 
 .model-overlay {
@@ -23,12 +30,11 @@
     height: 100%;
     left: 0;
     top: 0;
-    transform: translate(0, 0);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5rem);
-    display: none;
+    background-color: #203239;
+    z-index: 1000;
 }
 
 .model-overlay.open {

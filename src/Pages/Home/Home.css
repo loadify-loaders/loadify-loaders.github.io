@@ -1,35 +1,41 @@
 .home-container {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     background-color: #141E27;
+    overflow: hidden;
 }
 
 .sidebar {
     width: 25%;
-    min-height: 100%;
+    min-height: 0;
+    flex-shrink: 0;
 }
 
 .loader-cards {
     flex: 1;
     min-height: 100%;
+    overflow: hidden;
 }
 
 @media screen and (max-width:1200px) {
     .home-container {
         flex-direction: column;
-        height: auto;
+        height: 100vh;
     }
 
     .sidebar {
         width: 100%;
-        min-height: min-content;
+        height: auto;
+        flex-shrink: 0;
     }
 
     .loader-cards {
         flex: 1;
         width: 100%;
+        min-height: 0;
+        overflow: hidden;
     }
 
 }
