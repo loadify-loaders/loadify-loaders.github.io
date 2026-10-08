@@ -24,7 +24,6 @@
     right: 0;
     top: 0;
     transform: translate(-45%, 45%);
-    background-color: #fff;
     animation: rectangle2 2s ease-in-out infinite;
     transform-origin: left bottom;
 }
@@ -33,7 +32,6 @@
     left: 0;
     bottom: 0;
     transform: translate(45%, -45%);
-    background-color: #fff;
     animation: rectangle3 2s ease-in-out infinite;
     transform-origin: right top;
 }
@@ -42,7 +40,6 @@
     right: 0;
     bottom: 0;
     transform: translate(-45%, -45%);
-    background-color: #fff;
     animation: rectangle4 2s ease-in-out infinite;
     transform-origin: left top;
 }
