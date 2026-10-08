@@ -861,7 +861,6 @@ const LoadersData = [
     right: 0;
     top: 0;
     transform: translate(-45%, 45%);
-    background-color: #fff;
     animation: rectangle2 2s ease-in-out infinite;
     transform-origin: left bottom;
 }
@@ -870,7 +869,6 @@ const LoadersData = [
     left: 0;
     bottom: 0;
     transform: translate(45%, -45%);
-    background-color: #fff;
     animation: rectangle3 2s ease-in-out infinite;
     transform-origin: right top;
 }
@@ -879,7 +877,6 @@ const LoadersData = [
     right: 0;
     bottom: 0;
     transform: translate(-45%, -45%);
-    background-color: #fff;
     animation: rectangle4 2s ease-in-out infinite;
     transform-origin: left top;
 }
@@ -1219,7 +1216,7 @@ const LoadersData = [
         css:
 `
 .loader {
-    width: 4rem;
+    width: 3.5rem;
     aspect-ratio: 1;
     background-color: #fff;
     border-radius: .5rem;
