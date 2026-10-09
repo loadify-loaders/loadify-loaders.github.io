@@ -20,6 +20,7 @@ import Loader19 from '../Components/Loaders/Loader19/Loader'
 import Loader20 from '../Components/Loaders/Loader20/Loader'
 import Loader21 from '../Components/Loaders/Loader21/Loader'
 import Loader22 from '../Components/Loaders/Loader22/Loader'
+import Loader23 from '../Components/Loaders/Loader23/Loader'
 
 const LoadersData = [
     {
@@ -1366,6 +1367,33 @@ const LoadersData = [
 }
     `,
         component: <Loader22/>
+    },
+    {
+        id: 23,
+        category: 'circle',
+        react:
+`
+<div className='loader'></div>
+    `,
+        css:
+`
+.loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .4rem solid #fff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+    `,
+        component: <Loader23/>
     }
 ]
 

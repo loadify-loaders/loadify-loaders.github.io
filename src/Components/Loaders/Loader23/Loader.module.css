@@ -1,0 +1,15 @@
+.loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .4rem solid #fff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
