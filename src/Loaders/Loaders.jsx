@@ -19,6 +19,7 @@ import Loader18 from '../Components/Loaders/Loader18/Loader'
 import Loader19 from '../Components/Loaders/Loader19/Loader'
 import Loader20 from '../Components/Loaders/Loader20/Loader'
 import Loader21 from '../Components/Loaders/Loader21/Loader'
+import Loader22 from '../Components/Loaders/Loader22/Loader'
 
 const LoadersData = [
     {
@@ -1335,6 +1336,36 @@ const LoadersData = [
 }
     `,
         component: <Loader21/>
+    },
+    {
+        id: 22,
+        category: 'rectangle',
+        react:
+`
+<div className='loader'></div>
+    `,
+        css:
+`
+.loader {
+    width: 0rem;
+    aspect-ratio: 1;
+    outline-width: 0;
+    outline-color: #fff;
+    outline-style: solid;
+    outline-offset: -.2rem;
+    opacity: 0;
+    animation: loader .6s linear infinite;
+}
+
+@keyframes loader {
+    to {
+        opacity: 1;
+        width: 2rem;
+        outline-width: .2rem;
+    }
+}
+    `,
+        component: <Loader22/>
     }
 ]
 
