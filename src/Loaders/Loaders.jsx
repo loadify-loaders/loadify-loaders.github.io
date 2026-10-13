@@ -21,6 +21,7 @@ import Loader20 from '../Components/Loaders/Loader20/Loader'
 import Loader21 from '../Components/Loaders/Loader21/Loader'
 import Loader22 from '../Components/Loaders/Loader22/Loader'
 import Loader23 from '../Components/Loaders/Loader23/Loader'
+import Loader24 from '../Components/Loaders/Loader24/Loader'
 
 const LoadersData = [
     {
@@ -1394,6 +1395,66 @@ const LoadersData = [
 }
     `,
         component: <Loader23/>
+    },
+    {
+        id: 24,
+        category: 'bars',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.loader span {
+    width: 15%;
+    height: 10%;
+    background-color: #fff;
+    border-radius: .1rem;
+}
+
+.loader span:nth-child(1) {
+    animation: bar1 1s linear infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: bar2 1s linear infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: bar3 1s linear infinite;
+}
+
+@keyframes bar1 {
+    25% {
+        height: 90%;
+    }
+}
+
+@keyframes bar2 {
+    50% {
+        height: 90%;
+    }
+}
+
+@keyframes bar3 {
+    75% {
+        height: 90%;
+    }
+}
+    `,
+        component: <Loader24/>
     }
 ]
 
