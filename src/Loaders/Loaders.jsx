@@ -22,6 +22,7 @@ import Loader21 from '../Components/Loaders/Loader21/Loader'
 import Loader22 from '../Components/Loaders/Loader22/Loader'
 import Loader23 from '../Components/Loaders/Loader23/Loader'
 import Loader24 from '../Components/Loaders/Loader24/Loader'
+import Loader25 from '../Components/Loaders/Loader25/Loader'
 
 const LoadersData = [
     {
@@ -1455,6 +1456,87 @@ const LoadersData = [
 }
     `,
         component: <Loader24/>
+    },
+    {
+        id: 25,
+        react:
+`
+<div className='loader'>
+    <div className='bar'>
+        <div className='bar1-dot'></div>
+    </div>
+    <div className='bar'>
+        <div className='bar2-dot'></div>
+    </div>
+    <div className='bar'>
+        <div className='bar3-dot'></div>
+    </div>
+</div>  
+    `,
+        css:
+`
+.loader {
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bar {
+    width: 5%;
+    height: 90%;
+    background-color: red;
+    position: relative;
+    overflow: visible;
+    border-radius: .1rem;
+}
+
+.bar1-dot,
+.bar2-dot,
+.bar3-dot {
+    position: absolute;
+    width: .8rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+}
+
+.bar1-dot {
+    animation: bar1Dot 1s linear infinite;
+}
+
+.bar2-dot {
+    animation: bar2Dot 1s linear infinite;
+}
+
+.bar3-dot {
+    animation: bar3Dot 1s linear infinite;
+}
+
+@keyframes bar1Dot {
+    25% {
+        bottom: 70%;
+    }
+}
+
+@keyframes bar2Dot {
+    50% {
+        bottom: 70%;
+    }
+}
+
+@keyframes bar3Dot {
+    75% {
+        bottom: 70%;
+    }
+}
+    `,
+        category: 'dots',
+        component: <Loader25/>
     }
 ]
 

@@ -1,0 +1,59 @@
+.loader {
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bar {
+    width: 5%;
+    height: 90%;
+    background-color: red;
+    position: relative;
+    overflow: visible;
+    border-radius: .1rem;
+}
+
+.bar1-dot,
+.bar2-dot,
+.bar3-dot {
+    position: absolute;
+    width: .8rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+}
+
+.bar1-dot {
+    animation: bar1Dot 1s linear infinite;
+}
+
+.bar2-dot {
+    animation: bar2Dot 1s linear infinite;
+}
+
+.bar3-dot {
+    animation: bar3Dot 1s linear infinite;
+}
+
+@keyframes bar1Dot {
+    25% {
+        bottom: 70%;
+    }
+}
+
+@keyframes bar2Dot {
+    50% {
+        bottom: 70%;
+    }
+}
+
+@keyframes bar3Dot {
+    75% {
+        bottom: 70%;
+    }
+}
