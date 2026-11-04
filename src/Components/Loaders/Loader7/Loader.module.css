@@ -11,6 +11,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
     border: .2rem solid red;
     animation: rotateLeft 2s linear infinite;
 }
@@ -22,12 +23,12 @@
 
 @keyframes rotateLeft {
     to {
-        transform: rotate(-360deg);
+        transform: translate(-50%, -50%) rotate(-360deg);
     }
 }
 
 @keyframes rotateRight {
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
