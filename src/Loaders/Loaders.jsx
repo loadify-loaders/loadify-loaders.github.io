@@ -23,6 +23,7 @@ import Loader22 from '../Components/Loaders/Loader22/Loader'
 import Loader23 from '../Components/Loaders/Loader23/Loader'
 import Loader24 from '../Components/Loaders/Loader24/Loader'
 import Loader25 from '../Components/Loaders/Loader25/Loader'
+import Loader26 from '../Components/Loaders/Loader26/Loader'
 
 const LoadersData = [
     {
@@ -1459,6 +1460,7 @@ const LoadersData = [
     },
     {
         id: 25,
+        category: 'dots',
         react:
 `
 <div className='loader'>
@@ -1535,8 +1537,87 @@ const LoadersData = [
     }
 }
     `,
-        category: 'dots',
         component: <Loader25/>
+    },
+    {
+        id: 26,
+        category: 'dots',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    position: relative;
+    width: 5rem;
+    aspect-ratio: 1;
+}
+
+.loader span {
+    position: absolute;
+    width: 1rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 50%;
+    background-color: #fff;
+}
+
+.loader span:nth-child(1) {
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation: dot1 1s linear infinite;
+}
+
+.loader span:nth-child(2) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: dot2 1s linear infinite;
+}
+
+.loader span:nth-child(3) {
+    right: 20%;
+    transform: translate(50%, -50%);
+    animation: dot3 1s linear infinite;
+}
+
+@keyframes dot1 {
+    25% {
+        width: 1.4rem;
+    }
+
+    50%,
+    100% {
+        width: 1rem;
+    }
+}
+
+@keyframes dot2 {
+    50% {
+        width: 1.4rem;
+    }
+
+    75%,
+    100% {
+        width: 1rem;
+    }
+}
+
+@keyframes dot3 {
+    75% {
+        width: 1.4rem;
+    }
+
+    100% {
+        width: 1rem;
+    }
+}
+    `,
+        component: <Loader26/>
     }
 ]
 
