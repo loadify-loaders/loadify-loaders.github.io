@@ -24,6 +24,7 @@ import Loader23 from '../Components/Loaders/Loader23/Loader'
 import Loader24 from '../Components/Loaders/Loader24/Loader'
 import Loader25 from '../Components/Loaders/Loader25/Loader'
 import Loader26 from '../Components/Loaders/Loader26/Loader'
+import Loader27 from '../Components/Loaders/Loader27/Loader'
 
 const LoadersData = [
     {
@@ -1618,6 +1619,87 @@ const LoadersData = [
 }
     `,
         component: <Loader26/>
+    },
+    {
+        id: 27,
+        category: 'bars',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 4rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+.loader span {
+    width: 15%;
+    height: 0;
+    background-color: #fff;
+    border-top-left-radius: .1rem;
+    border-top-right-radius: .1rem;
+}
+
+.loader span:nth-child(1) {
+    animation: bar1 1.6s ease-in-out infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: bar2 1.6s ease-in-out infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: bar3 1.6s ease-in-out infinite;
+}
+
+.loader span:nth-child(4) {
+    animation: bar4 1.6s ease-in-out infinite;
+}
+
+@keyframes bar1 {
+
+    12.5%,
+    87.5% {
+        height: 100%;
+    }
+}
+
+@keyframes bar2 {
+
+    25%,
+    75% {
+        height: 100%;
+    }
+}
+
+@keyframes bar3 {
+
+    37.5%,
+    62.5% {
+        height: 100%;
+    }
+}
+
+@keyframes bar4 {
+
+    50%,
+    50% {
+        height: 100%;
+    }
+}
+    `,
+        component: <Loader27/>
     }
 ]
 
