@@ -25,6 +25,7 @@ import Loader24 from '../Components/Loaders/Loader24/Loader'
 import Loader25 from '../Components/Loaders/Loader25/Loader'
 import Loader26 from '../Components/Loaders/Loader26/Loader'
 import Loader27 from '../Components/Loaders/Loader27/Loader'
+import Loader28 from '../Components/Loaders/Loader28/Loader'
 
 const LoadersData = [
     {
@@ -946,7 +947,7 @@ const LoadersData = [
         category: 'bars',
         react:
 `
-<div className={styles['loader']}>
+<div className='loader'>
     <span></span>
     <span></span>
     <span></span>
@@ -1134,7 +1135,7 @@ const LoadersData = [
         category: 'bars',
         react:
 `
-<div className={styles['loader']}>
+<div className='loader'>
     <span></span>
 </div>
     `,
@@ -1171,7 +1172,7 @@ const LoadersData = [
         category: 'bars',
         react:
 `
-<div className={styles['loader']}>
+<div className='loader'>
     <span></span>
     <span></span>
     <span></span>
@@ -1296,9 +1297,9 @@ const LoadersData = [
         category: 'dots',
         react:
 `
-<div className={styles['loader']}>
-    <div className={styles['dot']}></div>
-    <div className={styles['bar']}></div>
+<div className='loader'>
+    <div className='dot'></div>
+    <div className='bar'></div>
 </div>
     `,
         css:
@@ -1700,6 +1701,64 @@ const LoadersData = [
 }
     `,
         component: <Loader27/>
+    },
+    {
+        id: 28,
+        category: 'bars',
+        react:
+`
+<div className='loader'>
+    <span></span>
+    <div className='loader-body'>
+        <p></p>
+    </div>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 2.5rem;
+    height: 4rem;
+    position: relative;
+    border: .2rem solid #fff;
+}
+
+.loader span:nth-child(1) {
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    background-color: #fff;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: .1rem;
+}
+
+.loader-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.loader-body p {
+    position: absolute;
+    background-color: #00ff00;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    animation: span2 3s linear infinite;
+}
+
+@keyframes span2 {
+
+    95%,
+    100% {
+        height: 100%;
+    }
+}
+    `,
+        component: <Loader28/>
     }
 ]
 
