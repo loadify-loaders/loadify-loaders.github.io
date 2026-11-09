@@ -27,6 +27,7 @@ import Loader26 from '../Components/Loaders/Loader26/Loader'
 import Loader27 from '../Components/Loaders/Loader27/Loader'
 import Loader28 from '../Components/Loaders/Loader28/Loader'
 import Loader29 from '../Components/Loaders/Loader29/Loader'
+import Loader30 from '../Components/Loaders/Loader30/Loader'
 
 const LoadersData = [
     {
@@ -1790,6 +1791,46 @@ const LoadersData = [
 }
     `,
         component: <Loader29/>
+    },
+    {
+        id: 30,
+        category: 'circle',
+        react:
+`
+<div className=loader'>
+    <span className='circle'></span>
+</div>
+    `,
+        css:
+`
+.loader {
+    width: 3rem;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border-radius: 50%;
+    border: .2rem solid red;
+    position: relative;
+    animation: rotate 1s linear infinite;
+}
+
+.circle {
+    width: .8rem;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+    `,
+        component: <Loader30/>
     }
 ]
 
