@@ -1774,16 +1774,12 @@ const LoadersData = [
     width: 3rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: conic-gradient(
-            transparent 0deg,
+    background: conic-gradient(transparent 0deg,
             transparent 90deg,
-            #fff 360deg
-            );
-    mask: radial-gradient(
-            farthest-side,
+            #fff 360deg);
+    mask: radial-gradient(farthest-side,
             transparent calc(100% - .4rem),
-            black 0
-            );
+            black 0);
     animation: spin 1s linear infinite;
 }
 
